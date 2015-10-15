@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<root>
+    <devicevendordef>
+        <vendorname>CM_Storm</vendorname>
+        <vendorid>0x2516</vendorid>
+    </devicevendordef>
+
+    <deviceproductdef>
+        <productname>QuickFire_TK</productname>
+        <productid>0x0011</productid>
+    </deviceproductdef>
+    <item>
+        <name>Quickfire TK</name>
+        <identifier>private.quickfiretk</identifier>
+        <device_only>DeviceVendor::CM_Storm, DeviceProduct::QuickFire_TK</device_only>
+        <autogen>
+            __KeyToKey__ KeyCode::KEYPAD_CLEAR, KeyCode::VK_IOHIKEYBOARD_TOGGLE_NUMLOCK
+        </autogen>
+    </item>
+</root>
