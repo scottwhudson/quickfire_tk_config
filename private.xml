@@ -1,44 +1,48 @@
 <?xml version="1.0"?>
 <root>
+  <!-- CM Storm -->
   <devicevendordef>
-    <vendorname>CM_Storm</vendorname>
+    <vendorname>CM</vendorname>
     <vendorid>0x2516</vendorid>
   </devicevendordef>
 
+  <!-- QuickFire Rapid -->
   <deviceproductdef>
-    <productname>QuickFire_TK</productname>
+    <productname>RAPID</productname>
+    <productid>0x0004</productid>
+  </deviceproductdef>
+
+  <!-- QuickFire TK -->
+  <deviceproductdef>
+    <productname>TK</productname>
     <productid>0x0011</productid>
   </deviceproductdef>
+
+  <item>
+    <name>Quickfire Rapid (Media Keys)</name>
+    <identifier>private.quickfire_rapid</identifier>
+    <device_only>DeviceVendor::CM, DeviceProduct::RAPID</device_only>
+    <autogen>__KeyToKey__ KeyCode::F5, ConsumerKeyCode::MUSIC_PLAY</autogen>
+    <autogen>__KeyToKey__ KeyCode::F7, ConsumerKeyCode::MUSIC_PREV</autogen>
+    <autogen>__KeyToKey__ KeyCode::F8, ConsumerKeyCode::MUSIC_NEXT</autogen>
+    <autogen>__KeyToKey__ KeyCode::F10, ConsumerKeyCode::VOLUME_MUTE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F11, ConsumerKeyCode::VOLUME_DOWN</autogen>
+    <autogen>__KeyToKey__ KeyCode::F12, ConsumerKeyCode::VOLUME_UP</autogen>
+    <!-- Swap Command/Option a la Mac -->
+    <autogen>--KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
+    <autogen>--KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
+    <autogen>--KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
+    <autogen>--KeyToKey__ KeyCode::OPTION_R, KeyCode::COMMAND_R</autogen>
+  </item>
+
   <item>
     <name>Quickfire TK</name>
-    <identifier>private.quickfiretk</identifier>
-    <device_only>DeviceVendor::CM_Storm, DeviceProduct::QuickFire_TK</device_only>
-    <autogen>
-      __KeyToKey__
-      KeyCode::KEYPAD_CLEAR,
-      KeyCode::VK_IOHIKEYBOARD_TOGGLE_NUMLOCK
-    </autogen>
-
-    <!-- More Mac key-mappings -->
-    <autogen>
-      __KeyToKey__
-      KeyCode::COMMAND_L,
-      KeyCode::OPTION_L
-    </autogen>
-    <autogen>
-      __KeyToKey__
-      KeyCode::OPTION_L,
-      KeyCode::COMMAND_L
-    </autogen>
-    <autogen>
-      __KeyToKey__
-      KeyCode::COMMAND_R,
-      KeyCode::OPTION_R
-    </autogen>
-    <autogen>
-      __KeyToKey__
-      KeyCode::OPTION_R,
-      KeyCode::COMMAND_R
-    </autogen>
+    <identifier>private.quickfire_tk</identifier>
+    <device_only>DeviceVendor::CM, DeviceProduct::TK</device_only>
+    <autogen>__KeyToKey__ KeyCode::KEYPAD_CLEAR, KeyCode::VK_IOHIKEYBOARD_TOGGLE_NUMLOCK</autogen>
+    <autogen>--KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
+    <autogen>--KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
+    <autogen>--KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
+    <autogen>--KeyToKey__ KeyCode::OPTION_R, KeyCode::COMMAND_R</autogen>
   </item>
 </root>
